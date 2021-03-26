@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header.header-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  background: #333;
+}
+
+header.header-section nav.navbar {
+  width: 100%;
+  color: #069;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: o 0.4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+header.header-section nav.navbar .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header.header-section nav.navbar .icon h1 {
+  font-size: 900;
+  margin: 0 0.2rem;
+  font-size: 1.4rem;
+}
+
+header.header-section nav.navbar .icon i {
+  margin: 0 0.2rem;
+  font-size: 1.6rem;
+}
+
+header.header-section nav.navbar .navigation a button {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 0.4rem 10rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+form {
+  width: 100%;
+  height: 60vh;
+  padding: 2rem;
+  margin: 5rem 0 0 0;
+  background: #ccc;
+  border: 0.2rem solid #333;
+}
+
+form label {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+form input {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+form textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 0;
+}
+
+form input[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 0.4rem 10rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+footer.footer-section {
+  left: 0;
+  top: 5.2rem;
+  width: 100%;
+  padding: 0.4rem 0;
+  position: relative;
+  background: #333;
+}
+
+footer.footer-section h1 {
+  color: #069;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 0.42rem 0;
+}
+/*# sourceMappingURL=style.css.map */

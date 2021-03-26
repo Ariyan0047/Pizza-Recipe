@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-transform: uppercase;
+  font-family: "Times New Roman", Times, serif;
+}
+
+header.header-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: relative;
+  background: #333;
+
+  nav.navbar {
+    width: 100%;
+    color: #069;
+    display: flex;
+    padding: o.4rem;
+    align-items: center;
+    text-transform: uppercase;
+
+    .icon {
+      display: flex;
+
+      h1 {
+        font-size: 900;
+        margin: 0 0.2rem;
+        font-size: 1.4rem;
+      }
+      i {
+        margin: 0 0.2rem;
+        font-size: 1.6rem;
+      }
+    }
+
+    .navigation {
+      a {
+        button {
+          border: none;
+          outline: none;
+          border-radius: 0;
+          padding: 0.4rem 10rem;
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+form {
+  width: 100%;
+  height: 60vh;
+  padding: 2rem;
+  margin: 5rem 0 0 0;
+  background: #ccc;
+  border: 0.2rem solid #333;
+
+  label {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+  }
+
+  textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    border-radius: 0;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    padding: 0.4rem 10rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+}
+
+footer.footer-section {
+  left: 0;
+  top: 5.2rem;
+  width: 100%;
+  padding: 0.4rem 0;
+  position: relative;
+  background: #333;
+
+  h1 {
+    color: #069;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0.42rem 0;
+  }
+}
