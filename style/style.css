@@ -9,6 +9,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
+  background: #ddd;
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
 }
@@ -62,8 +63,8 @@ header.header-section nav.navbar .navigation a button {
 
 form {
   width: 100%;
-  height: 60vh;
-  padding: 2rem;
+  height: 100%;
+  padding: 2rem 2rem !important;
   margin: 5rem 0 0 0;
   background: #ccc;
   border: 0.2rem solid #333;

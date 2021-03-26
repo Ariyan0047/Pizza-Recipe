@@ -1,8 +1,47 @@
 <?php
+
+$errors = [
+  "titleError" => "Title must be letters",
+  "msgError" => "Comma Separated Values Required",
+  "emailError" => "Invalid email",
+  "fieldError" => "User fields can not be empty",
+];
+
 if (isset($_POST["submit"])) {
-  echo htmlspecialchars($_POST["name"]);
-  echo htmlspecialchars($_POST["msg"]);
-} ?>
+  if (empty($_POST["name"])) {
+    echo "USER FIELDS EMPTY" . "<br/>";
+  } else {
+    $title = $_POST["name"];
+    if (!preg_match("/^[a-zA-z\s]+$/", $title)) {
+      echo "Title must be letters" . "<br/>";
+    } else {
+      echo htmlspecialchars($_POST["name"]) . "<br/>";
+    }
+  }
+
+  if (empty($_POST["msg"])) {
+    echo "USER FIELDS EMPTY" . "<br/>";
+  } else {
+    $msg = $_POST["msg"];
+    if (!preg_match("/^([a-zA-z\s]+)(,\s*[a-zA-Z\s]*)*$/", $msg)) {
+      echo "Comma Separated Values Required" . "<br/>";
+    } else {
+      echo htmlspecialchars($_POST["msg"]) . "<br/>";
+    }
+  }
+
+  if (empty($_POST["email"])) {
+    echo "USER FIELDS EMPTY" . "<br/>";
+  } else {
+    $email = $_POST["email"];
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      echo "INVALID EMAIL" . "<br/>";
+    } else {
+      echo htmlspecialchars($_POST["email"]) . "<br/>";
+    }
+  }
+}
+?>
 
 
 <!DOCTYPE html>
@@ -18,7 +57,6 @@ if (isset($_POST["submit"])) {
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
     <title>PIZZA | FORM</title>
-    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -37,6 +75,11 @@ if (isset($_POST["submit"])) {
             <label class="form-label">ingrediants</label>
             <textarea name="msg" id="msg" class="form-control"></textarea>
             <h1 class="alert">ingredient is requred !!!!!!!!</h1>
+        </div>
+        <div class="mb-4">
+            <label class="form-label">email</label>
+            <input type="text" id="email" name="email" class="form-control">
+            <h1 class="alert">email is requred !!!!!!!!!</h1>
         </div>
         <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4" value="SUBMIT">
     </form>
