@@ -1,43 +1,36 @@
 <?php
 
 $errors = [
-  "titleError" => "Title must be letters",
-  "msgError" => "Comma Separated Values Required",
-  "emailError" => "Invalid email",
-  "fieldError" => "User fields can not be empty",
+  "titleError" => "",
+  "msgError" => "",
+  "emailError" => "",
 ];
 
 if (isset($_POST["submit"])) {
   if (empty($_POST["name"])) {
-    echo "USER FIELDS EMPTY" . "<br/>";
+    $errors["titleError"] = "empty input field !!!!";
   } else {
     $title = $_POST["name"];
     if (!preg_match("/^[a-zA-z\s]+$/", $title)) {
-      echo "Title must be letters" . "<br/>";
-    } else {
-      echo htmlspecialchars($_POST["name"]) . "<br/>";
+      $errors["titleError"] = "Title must be letters !!!!";
     }
   }
 
   if (empty($_POST["msg"])) {
-    echo "USER FIELDS EMPTY" . "<br/>";
+    $errors["msgError"] = "empty input field !!!!";
   } else {
     $msg = $_POST["msg"];
     if (!preg_match("/^([a-zA-z\s]+)(,\s*[a-zA-Z\s]*)*$/", $msg)) {
-      echo "Comma Separated Values Required" . "<br/>";
-    } else {
-      echo htmlspecialchars($_POST["msg"]) . "<br/>";
+      $errors["msgError"] = "Ingredients should be comma separated !!!!";
     }
   }
 
   if (empty($_POST["email"])) {
-    echo "USER FIELDS EMPTY" . "<br/>";
+    $errors["emailError"] = "empty input field !!!!";
   } else {
     $email = $_POST["email"];
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      echo "INVALID EMAIL" . "<br/>";
-    } else {
-      echo htmlspecialchars($_POST["email"]) . "<br/>";
+      $errors["emailError"] = "Ingredients should be comma separated !!!!";
     }
   }
 }
@@ -69,17 +62,17 @@ if (isset($_POST["submit"])) {
         <div class="mb-4">
             <label class="form-label">title</label>
             <input type="text" id="text" name="name" class="form-control">
-            <h1 class="alert">title is requred !!!!!!!!!</h1>
+            <h1 class="show"><?php echo $errors["titleError"]; ?></h1>
         </div>
         <div class="mb-4">
             <label class="form-label">ingrediants</label>
             <textarea name="msg" id="msg" class="form-control"></textarea>
-            <h1 class="alert">ingredient is requred !!!!!!!!</h1>
+            <h1 class="show"><?php echo $errors["msgError"]; ?></h1>
         </div>
         <div class="mb-4">
             <label class="form-label">email</label>
             <input type="text" id="email" name="email" class="form-control">
-            <h1 class="alert">email is requred !!!!!!!!!</h1>
+            <h1 class="show"><?php echo $errors["emailError"]; ?></h1>
         </div>
         <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4" value="SUBMIT">
     </form>

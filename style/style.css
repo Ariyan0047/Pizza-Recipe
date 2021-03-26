@@ -70,16 +70,11 @@ form {
   border: 0.2rem solid #333;
 }
 
-form h1.alert {
-  display: none;
-}
-
 form h1.show {
+  padding: 0;
   color: red;
   font-size: 1rem;
   font-weight: 900;
-  display: block;
-  padding: 0;
   margin: 0.4rem 0 0 0;
 }
 
