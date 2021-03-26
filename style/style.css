@@ -91,13 +91,6 @@ form input {
   text-transform: lowercase;
 }
 
-form textarea {
-  border: none;
-  outline: none;
-  resize: none;
-  border-radius: 0;
-}
-
 form input[type="submit"] {
   width: 100%;
   border: none;
