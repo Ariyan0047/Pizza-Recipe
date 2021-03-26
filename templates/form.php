@@ -18,6 +18,7 @@ if (isset($_POST["submit"])) {
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/style.css">
     <title>PIZZA | FORM</title>
+    <script src="../js/main.js" defer></script>
 </head>
 
 <body>
@@ -29,13 +30,15 @@ if (isset($_POST["submit"])) {
     <form action="form.php" method="POST" class="container">
         <div class="mb-4">
             <label class="form-label">title</label>
-            <input type="text" name="name" class="form-control" required>
+            <input type="text" id="text" name="name" class="form-control">
+            <h1 class="alert">title is requred !!!!!!!!!</h1>
         </div>
         <div class="mb-4">
             <label class="form-label">ingrediants</label>
-            <textarea name="msg" class="form-control" required></textarea>
+            <textarea name="msg" id="msg" class="form-control"></textarea>
+            <h1 class="alert">ingredient is requred !!!!!!!!</h1>
         </div>
-        <input type="submit" name="submit" class="btn btn-primary mt-4" value="SUBMIT">
+        <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4" value="SUBMIT">
     </form>
 
     <!-- FOOTER SECTION -->

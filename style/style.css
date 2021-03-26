@@ -69,6 +69,19 @@ form {
   border: 0.2rem solid #333;
 }
 
+form h1.alert {
+  display: none;
+}
+
+form h1.show {
+  color: red;
+  font-size: 1rem;
+  font-weight: 900;
+  display: block;
+  padding: 0;
+  margin: 0.4rem 0 0 0;
+}
+
 form label {
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -94,9 +107,12 @@ form input[type="submit"] {
   border: none;
   outline: none;
   border-radius: 0;
+  font-weight: 900;
+  font-size: 1.4rem;
   padding: 0.4rem 10rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+  margin: -0.6rem 0 0 0 !important;
 }
 
 footer.footer-section {
