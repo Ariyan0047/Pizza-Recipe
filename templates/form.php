@@ -63,17 +63,23 @@ if (isset($_POST["submit"])) {
     <form action="form.php" method="POST" class="container">
         <div class="mb-4">
             <label class="form-label">title</label>
-            <input type="text" id="text" name="name" class="form-control" value=<?php echo $title; ?>>
+            <input type="text" name="name" class="form-control" value=<?php echo htmlspecialchars(
+              $title
+            ); ?>>
             <h1 class="show"><?php echo $errors["titleError"]; ?></h1>
         </div>
         <div class="mb-4">
             <label class="form-label">ingrediants</label>
-            <input name="msg" id="msg" class="form-control" value=<?php echo $msg; ?>>
+            <input name="msg" class="form-control" value=<?php echo htmlspecialchars(
+              $msg
+            ); ?>>
             <h1 class="show"><?php echo $errors["msgError"]; ?></h1>
         </div>
         <div class="mb-4">
             <label class="form-label">email</label>
-            <input type="text" id="email" name="email" class="form-control" value=<?php echo $email; ?>>
+            <input type="text" name="email" class="form-control" value=<?php echo htmlspecialchars(
+              $email
+            ); ?>>
             <h1 class="show"><?php echo $errors["emailError"]; ?></h1>
         </div>
         <input type="submit" id="submit" name="submit" class="btn btn-primary mt-4" value="SUBMIT">
