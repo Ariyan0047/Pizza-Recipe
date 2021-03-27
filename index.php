@@ -1,3 +1,36 @@
+<?php
+
+// DATABASE CONNECTION
+$connection = mysqli_connect(
+  "localhost",
+  "aariyan0047",
+  "Realmadrid027742909",
+  "pizza"
+);
+
+// CHECKING CONNECTION
+if (!$connection) {
+  echo "Error:" . mysqli_connect_error();
+}
+
+// QUERY FOR ALL DATA
+$sql = "SELECT user_id,pizza_name,ingrediants_name FROM details";
+
+// MAKE QUERY AND GET RESULT
+$result = mysqli_query($connection, $sql);
+
+// FETCHING RESULTS AS AN ARRAY
+$pizzas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// FREEING MEMORY
+mysqli_free_result($result);
+
+// CLOSE CONNECTION
+mysqli_close($connection);
+
+print_r($pizzas);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,10 +50,6 @@
     <!-- HEADER SECTION -->
     <?php include "./templates/header.php"; ?>
     <!-- END HEADER SECTION -->
-
-    <!-- FORM SECTION -->
-
-    <!-- END FORM SECTION -->
 
     <!-- FOOTER SECTION -->
     <?php include "./templates/footer.php"; ?>
