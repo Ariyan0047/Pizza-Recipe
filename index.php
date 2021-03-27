@@ -14,7 +14,8 @@ if (!$connection) {
 }
 
 // QUERY FOR ALL DATA
-$sql = "SELECT user_id,pizza_name,ingrediants_name FROM details";
+$sql =
+  "SELECT user_id,pizza_name,ingrediants_name FROM details ORDER BY created_at";
 
 // MAKE QUERY AND GET RESULT
 $result = mysqli_query($connection, $sql);
@@ -28,7 +29,7 @@ mysqli_free_result($result);
 // CLOSE CONNECTION
 mysqli_close($connection);
 
-print_r($pizzas);
+// print_r($pizzas);
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +51,31 @@ print_r($pizzas);
     <!-- HEADER SECTION -->
     <?php include "./templates/header.php"; ?>
     <!-- END HEADER SECTION -->
+
+    <div class="container">
+        <h1 class="display-4 text-center">pizza's</h1>
+        <div class="row">
+            <?php foreach ($pizzas as $pizza) { ?>
+            <div class="col-3 m-4">
+                <div class="card text-center" style="width: 20rem;">
+                    <img class="card-img-top" src="https://unsplash.com/photos/MQUqbmszGGM" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo htmlspecialchars(
+                          $pizza["pizza_name"]
+                        ); ?></h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"></li>
+                        </ul>
+                        <hr>
+                        <a href="#" class="btn btn-primary">more info</a>
+                        <hr>
+                        <a href="#" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
 
     <!-- FOOTER SECTION -->
     <?php include "./templates/footer.php"; ?>
