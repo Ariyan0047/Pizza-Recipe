@@ -64,7 +64,14 @@ mysqli_close($connection);
                           $pizza["pizza_name"]
                         ); ?></h5>
                         <ul class="list-group">
-                            <li class="list-group-item"></li>
+                            <?php foreach (
+                              explode(",", $pizza["ingrediants_name"])
+                              as $ingrediant
+                            ) { ?>
+                            <li class="list-group-item"><?php echo htmlspecialchars(
+                              $ingrediant
+                            ); ?></li>
+                            <?php } ?>
                         </ul>
                         <hr>
                         <a href="#" class="btn btn-primary">more info</a>
