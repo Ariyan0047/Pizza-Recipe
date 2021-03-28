@@ -35,21 +35,27 @@ header.header-section nav.navbar {
   text-transform: uppercase;
 }
 
-header.header-section nav.navbar .icon {
+header.header-section nav.navbar .icon a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header.header-section nav.navbar .icon h1 {
+header.header-section nav.navbar .icon a span {
   font-size: 900;
   margin: 0 0.2rem;
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
-header.header-section nav.navbar .icon i {
+header.header-section nav.navbar .icon a i {
   margin: 0 0.2rem;
   font-size: 1.6rem;
+}
+
+header.header-section nav.navbar .icon a:hover {
+  opacity: 0.5;
+  color: #069;
+  text-decoration: none;
 }
 
 header.header-section nav.navbar .navigation a button {

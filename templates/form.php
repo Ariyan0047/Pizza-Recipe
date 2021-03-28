@@ -1,5 +1,8 @@
 <?php
 
+// IMPORTING CONNECTION
+include "./connection.php";
+
 $title = $msg = $email = "";
 
 $errors = [
@@ -34,6 +37,12 @@ if (isset($_POST["submit"])) {
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
       $errors["emailError"] = "Ingredients should be comma separated !!!!";
     }
+  }
+
+  // REDIRECTING
+  if (array_filter($errors)) {
+  } else {
+    header("location: ../index.php");
   }
 }
 ?>

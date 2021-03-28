@@ -1,17 +1,7 @@
 <?php
 
-// DATABASE CONNECTION
-$connection = mysqli_connect(
-  "localhost",
-  "aariyan0047",
-  "Realmadrid027742909",
-  "pizza"
-);
-
-// CHECKING CONNECTION
-if (!$connection) {
-  echo "Error:" . mysqli_connect_error();
-}
+// IMPORTING CONNECTION
+include "./templates/connection.php";
 
 // QUERY FOR ALL DATA
 $sql =
@@ -55,10 +45,10 @@ mysqli_close($connection);
     <div class="container">
         <h1 class="display-4 text-center">pizza's</h1>
         <div class="row">
-            <?php foreach ($pizzas as $pizza) { ?>
+            <?php foreach ($pizzas as $pizza): ?>
             <div class="col-3 m-4">
                 <div class="card text-center" style="width: 20rem;">
-                    <img class="card-img-top" src="https://unsplash.com/photos/MQUqbmszGGM" alt="Card image cap">
+                    <img class="card-img-top" src="img\pizza1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo htmlspecialchars(
                           $pizza["pizza_name"]
@@ -67,11 +57,11 @@ mysqli_close($connection);
                             <?php foreach (
                               explode(",", $pizza["ingrediants_name"])
                               as $ingrediant
-                            ) { ?>
+                            ): ?>
                             <li class="list-group-item"><?php echo htmlspecialchars(
                               $ingrediant
                             ); ?></li>
-                            <?php } ?>
+                            <?php endforeach; ?>
                         </ul>
                         <hr>
                         <a href="#" class="btn btn-primary">more info</a>
@@ -80,7 +70,7 @@ mysqli_close($connection);
                     </div>
                 </div>
             </div>
-            <?php } ?>
+            <?php endforeach; ?>
         </div>
     </div>
 

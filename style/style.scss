@@ -29,16 +29,23 @@ header.header-section {
     text-transform: uppercase;
 
     .icon {
-      display: flex;
+      a {
+        display: flex;
+        span {
+          font-size: 900;
+          margin: 0 0.2rem;
+          font-size: 2rem;
+        }
+        i {
+          margin: 0 0.2rem;
+          font-size: 1.6rem;
+        }
 
-      h1 {
-        font-size: 900;
-        margin: 0 0.2rem;
-        font-size: 1.4rem;
-      }
-      i {
-        margin: 0 0.2rem;
-        font-size: 1.6rem;
+        &:hover {
+          opacity: 0.5;
+          color: #069;
+          text-decoration: none;
+        }
       }
     }
 
