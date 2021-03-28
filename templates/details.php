@@ -18,6 +18,19 @@ if (isset($_GET["id"])) {
   mysqli_free_result($result);
   mysqli_close($connection);
 }
+
+// DELETING ITEM
+if (isset($_POST["delete"])) {
+  $delete_id = mysqli_real_escape_string($connection, $_POST["delete_item"]);
+
+  $sql = "DELETE FROM details WHERE user_id=$delete_id";
+
+  if (mysqli_query($connection, $sql)) {
+    header("Location: ../index.php");
+  } else {
+    echo "Error:" . mysqli_error();
+  }
+}
 ?>
 
 
@@ -61,6 +74,15 @@ if (isset($_GET["id"])) {
         <p class="lead">created at: <?php echo date(
           $pizza["created_at"]
         ); ?></p>
+
+        <!-- DELETING ITEM -->
+        <form action="details.php" method="post" class="form">
+            <input type="hidden" name="delete_item" value="<?php echo $pizza[
+              "user_id"
+            ]; ?>">
+            <input type="submit" value="delete" name="delete" class="btn btn-primary w-100 border-0">
+        </form>
+
         <?php else: ?>
         <h1 class="display-4">no data to show</h1>
         <?php endif; ?>

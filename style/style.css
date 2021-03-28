@@ -127,7 +127,15 @@ footer.footer-section h1 {
 .items {
   padding: 1rem;
   background: #ddd;
-  margin: 3rem auto 3rem auto !important;
   border: 0.2rem solid #444;
+  margin: 3rem auto 3rem auto !important;
+}
+
+form.form {
+  border: 0;
+}
+
+form.form input[type="submit"] {
+  margin: -10rem 0 !important;
 }
 /*# sourceMappingURL=style.css.map */

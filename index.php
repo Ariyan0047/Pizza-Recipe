@@ -43,10 +43,10 @@ mysqli_close($connection);
     <!-- END HEADER SECTION -->
 
     <div class="container">
-        <h1 class="display-4 text-center text-muted">pizza's</h1>
+        <h1 class="display-4 text-center text-muted mt-2">pizza's</h1>
         <div class="row justify-content-center">
             <?php foreach ($pizzas as $pizza): ?>
-            <div class="col-md-3 mr-4 ml-4">
+            <div class="col-md-3 mr-4 ml-4 mb-4 mt-2">
                 <div class="card text-center" style="width: 20rem;">
                     <img class="card-img-top" src="img\pizza1.jpg">
                     <div class="card-body">
