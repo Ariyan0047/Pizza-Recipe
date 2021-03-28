@@ -18,8 +18,6 @@ mysqli_free_result($result);
 
 // CLOSE CONNECTION
 mysqli_close($connection);
-
-// print_r($pizzas);
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +66,6 @@ mysqli_close($connection);
                           "user_id"
                         ]; ?>" class="btn btn-primary">more info</a>
                         <hr>
-                        <a href="#" class="btn btn-primary">Delete</a>
                     </div>
                 </div>
             </div>

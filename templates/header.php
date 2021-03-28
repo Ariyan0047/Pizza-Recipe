@@ -6,7 +6,7 @@
             </a>
         </div>
         <div class="navigation">
-            <a href="./templates/form.php">
+            <a href="templates/form.php">
                 <button class="btn btn-info">add pizza</button>
             </a>
         </div>
