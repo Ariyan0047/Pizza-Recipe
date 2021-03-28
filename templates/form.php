@@ -42,6 +42,11 @@ if (isset($_POST["submit"])) {
   // REDIRECTING
   if (array_filter($errors)) {
   } else {
+    $name = mysqli_real_escape_string($connection, $_POST["name"]);
+    $msg = mysqli_real_escape_string($connection, $_POST["msg"]);
+    $email = mysqli_real_escape_string($connection, $_POST["email"]);
+
+    $sql = "INSERT INTO details(pizza_name,ingrediants_name,email) VALUES('$name','$msg','$email')";
     header("location: ../index.php");
   }
 }
