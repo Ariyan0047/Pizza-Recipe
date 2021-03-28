@@ -1,9 +1,8 @@
-<header class="header-section">
+<header class="header-section p-2">
     <nav class="navbar container">
         <div class="icon">
             <a href="../index.php">
-                <i class="fas fa-pizza-slice"></i>
-                <span>pizza</span>
+                <h1><i class="fas fa-pizza-slice"></i>pizza</h1>
             </a>
         </div>
         <div class="navigation">

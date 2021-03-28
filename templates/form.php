@@ -47,7 +47,11 @@ if (isset($_POST["submit"])) {
     $email = mysqli_real_escape_string($connection, $_POST["email"]);
 
     $sql = "INSERT INTO details(pizza_name,ingrediants_name,email) VALUES('$name','$msg','$email')";
-    header("location: ../index.php");
+    if (mysqli_query($connection, $sql)) {
+      header("location: ../index.php");
+    } else {
+      echo "Error" . mysqli_error();
+    }
   }
 }
 ?>

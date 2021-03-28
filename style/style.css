@@ -9,7 +9,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
-  background: #ddd;
+  background: #ccc;
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
 }
@@ -28,7 +28,7 @@ header.header-section nav.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: o 0.4rem;
+  padding: 0.4rem !important;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -41,15 +41,15 @@ header.header-section nav.navbar .icon a {
   display: flex;
 }
 
-header.header-section nav.navbar .icon a span {
+header.header-section nav.navbar .icon a h1 {
   font-size: 900;
   margin: 0 0.2rem;
-  font-size: 2rem;
+  font-size: 2rem !important;
 }
 
-header.header-section nav.navbar .icon a i {
+header.header-section nav.navbar .icon a h1 i {
   margin: 0 0.2rem;
-  font-size: 1.6rem;
+  font-size: 2rem !important;
 }
 
 header.header-section nav.navbar .icon a:hover {
@@ -68,11 +68,10 @@ header.header-section nav.navbar .navigation a button {
 }
 
 form {
-  width: 100%;
   height: 100%;
-  padding: 2rem 2rem !important;
   margin: 5rem 0 0 0;
   background: #ccc;
+  padding: 0 !important;
   border: 0.2rem solid #333;
 }
 
@@ -112,17 +111,23 @@ form input[type="submit"] {
 
 footer.footer-section {
   left: 0;
-  top: 5.2rem;
   width: 100%;
-  padding: 0.4rem 0;
+  padding: 1rem 0 !important;
   position: relative;
   background: #333;
 }
 
 footer.footer-section h1 {
   color: #069;
+  margin: 0.5rem 0;
   font-size: 1.4rem;
   text-align: center;
-  margin: 0.42rem 0;
+}
+
+.items {
+  padding: 1rem;
+  background: #ddd;
+  margin: 3rem auto 3rem auto !important;
+  border: 0.2rem solid #444;
 }
 /*# sourceMappingURL=style.css.map */

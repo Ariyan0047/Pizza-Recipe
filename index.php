@@ -33,8 +33,8 @@ mysqli_close($connection);
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>PIZZA | RECIPE</title>
 </head>
 
 <body>
@@ -43,16 +43,16 @@ mysqli_close($connection);
     <!-- END HEADER SECTION -->
 
     <div class="container">
-        <h1 class="display-4 text-center">pizza's</h1>
-        <div class="row">
+        <h1 class="display-4 text-center text-muted">pizza's</h1>
+        <div class="row justify-content-center">
             <?php foreach ($pizzas as $pizza): ?>
-            <div class="col-3 m-4">
+            <div class="col-md-3 mr-4 ml-4">
                 <div class="card text-center" style="width: 20rem;">
-                    <img class="card-img-top" src="img\pizza1.jpg" alt="Card image cap">
+                    <img class="card-img-top" src="img\pizza1.jpg">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo htmlspecialchars(
+                        <h3 class="card-title"><?php echo htmlspecialchars(
                           $pizza["pizza_name"]
-                        ); ?></h5>
+                        ); ?></h3>
                         <ul class="list-group">
                             <?php foreach (
                               explode(",", $pizza["ingrediants_name"])
@@ -64,7 +64,9 @@ mysqli_close($connection);
                             <?php endforeach; ?>
                         </ul>
                         <hr>
-                        <a href="#" class="btn btn-primary">more info</a>
+                        <a href="./templates/details.php?id=<?php echo $pizza[
+                          "user_id"
+                        ]; ?>" class="btn btn-primary">more info</a>
                         <hr>
                         <a href="#" class="btn btn-primary">Delete</a>
                     </div>

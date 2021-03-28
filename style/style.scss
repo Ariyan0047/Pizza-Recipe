@@ -8,7 +8,7 @@ body {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.6;
-  background: #ddd;
+  background: #ccc;
   text-transform: uppercase;
   font-family: "Times New Roman", Times, serif;
 }
@@ -24,21 +24,22 @@ header.header-section {
     width: 100%;
     color: #069;
     display: flex;
-    padding: o.4rem;
+    padding: 0.4rem !important;
     align-items: center;
     text-transform: uppercase;
 
     .icon {
       a {
         display: flex;
-        span {
+        h1 {
           font-size: 900;
           margin: 0 0.2rem;
-          font-size: 2rem;
-        }
-        i {
-          margin: 0 0.2rem;
-          font-size: 1.6rem;
+
+          font-size: 2rem !important;
+          i {
+            margin: 0 0.2rem;
+            font-size: 2rem !important;
+          }
         }
 
         &:hover {
@@ -65,11 +66,10 @@ header.header-section {
 }
 
 form {
-  width: 100%;
   height: 100%;
-  padding: 2rem 2rem !important;
   margin: 5rem 0 0 0;
   background: #ccc;
+  padding: 0 !important;
   border: 0.2rem solid #333;
 
   h1.show {
@@ -109,16 +109,22 @@ form {
 
 footer.footer-section {
   left: 0;
-  top: 5.2rem;
   width: 100%;
-  padding: 0.4rem 0;
+  padding: 1rem 0 !important;
   position: relative;
   background: #333;
 
   h1 {
     color: #069;
+    margin: 0.5rem 0;
     font-size: 1.4rem;
     text-align: center;
-    margin: 0.42rem 0;
   }
+}
+
+.items {
+  padding: 1rem;
+  background: #ddd;
+  margin: 3rem auto 3rem auto !important;
+  border: 0.2rem solid #444;
 }
